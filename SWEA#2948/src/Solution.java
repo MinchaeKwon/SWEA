@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.*;
 
 // HashMap 사용 <String, Integer> -> 특정 문자, 문자가 나타난 개수 저장
-public class SWEA_2948 {
+public class Solution {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
