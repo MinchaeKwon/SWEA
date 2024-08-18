@@ -62,6 +62,9 @@ public class Solution {
 	}
 	
 	private static void dfs(int x, int y, int dir, int cnt) {
+		// 현재 방향부터 반복문 시작 -> 이전 방향으로는 갈 수 없음
+		// 특정 칸에 방문했는지 확인하지 않는 이유도 이전 방향으로는 갈 수 없기 때문
+		// -> 방문한 곳을 또 방문하는 경우는 없음
 		for (int i = dir; i < 4; i++) {
 			int nx = x + dx[i];
 			int ny = y + dy[i];
