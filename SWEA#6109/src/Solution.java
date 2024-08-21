@@ -9,7 +9,7 @@
 import java.util.*;
 import java.io.*;
 
-public class SWEA_6109 {
+public class Solution {
 
 	// 상하좌우
 	static int[] dx = { -1, 1, 0, 0 };
