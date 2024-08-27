@@ -18,6 +18,7 @@ public class Solution {
 		for (int t = 1; t <= T; t++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 		
+			// 입력값을 012356789로 이루어져 있는 9진수로 봄
 			String A = st.nextToken();
 			String B = st.nextToken();
 			
@@ -43,17 +44,19 @@ public class Solution {
 		int idx = 0;
 		long result = 0;
 		
-		// 뒤에부터 진행
+		// 뒤에서부터 진행
 		for (int i = num.length() - 1; i >= start; i--) {
 			int cur = num.charAt(i) - '0';
 			
-			// 4를 초과하는 경우 1 감소 -> 4가 들어가는 층은 제외하기 때문에 감소시켜 주는 것
+			// 4를 초과하는 경우 1 감소
+			// 입력값이 4를 제외한 층이기 때문에 56789이면 1 감소시킴
+			// 012345678로 바꾸는 것
 			if (cur > 4) {
 				cur -= 1;
 			}
 			
 			// idx = 자릿수
-			result += (long) (cur * Math.pow(9, idx++)); // 9진수로 변환하고 result에 더함
+			result += (long) (cur * Math.pow(9, idx++)); // 십진수로 변환하고 result에 더함
 		}
 		
 		return minus ? -result : result; // 음수면 - 붙여줌
