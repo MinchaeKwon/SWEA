@@ -39,10 +39,9 @@ public class Solution {
 	static Point airport;
 	
 	static boolean[] visited;
-	
-	static int maxGood;
 	static Stack<Integer> path;
 	
+	static int maxGood;
 	static ArrayList<Integer> maxPath;
 	
 	public static void main(String[] args) throws IOException {
@@ -99,7 +98,6 @@ public class Solution {
 			}
 			
 			maxGood = 0;
-			maxPath = new ArrayList<>(); // 최종 이동 경로
 			
 			visited = new boolean[N + 1];
 			path = new Stack<>(); // 이동 경로 저장
