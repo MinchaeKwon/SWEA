@@ -1,3 +1,13 @@
+/**
+ * 1263. 사람 네트워크2
+ * 
+ * @author minchae
+ * @date 2024. 10. 10.
+ * 
+ * 실행 시간
+ * 1,296 ms
+ */
+
 import java.io.*;
 import java.util.*;
  
@@ -47,18 +57,20 @@ public class Solution {
             }
         }
          
-        int[] CC = new int[N];
+        int result = Integer.MAX_VALUE;
          
         for (int i = 0; i < N; i++) {
+        	int sum = 0;
+        	
             for (int j = 0; j < N; j++) {
                 if (map[i][j] != INF || map[j][i] != INF) {
-                    CC[i] += map[i][j];
+                    sum += map[i][j];
                 }
             }
+            
+            result = Math.min(result, sum);
         }
          
-        Arrays.sort(CC);
-         
-        return CC[0]; // 최솟값 반환
+        return result; // 최솟값 반환
     }
 }
